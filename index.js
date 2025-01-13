@@ -46,7 +46,7 @@ async function sortHackerNewsArticles() {
     currentCheck++; // an extra current check tick, to account for the initial comparison
     for (let i = 1; i < timestamps.length; i++) {
       // console.log(`comparing ${timestamps[i-1]} and ${timestamps[i]}`) // uncomment this line for a more verbose mode
-      if (timestamps[i-1] < timestamps[i]) { // if the higher up article is newer than the next down, then they're not sorted
+      if (timestamps[i-1] < timestamps[i]) { // if the higher up article is older than the next one down, then they're not sorted
         valid = false;
         break;
       }
